@@ -291,7 +291,8 @@ Map.prototype.getMyLocation = function(params, success_callback, error_callback)
 
 Map.prototype.setCameraTarget = function(latLng) {
   this.set('camera_target', latLng);
-  this.exec.call(this, null, this.errorHandler, this.id, 'setCameraTarget', [latLng.lat, latLng.lng]);
+  // this.exec.call(this, null, this.errorHandler, this.id, 'setCameraTarget', [latLng.lat, latLng.lng]);
+  this.exec.call(this, null, this.errorHandler, this.id, 'setCameraTarget', [latLng]);
   return this;
 };
 
